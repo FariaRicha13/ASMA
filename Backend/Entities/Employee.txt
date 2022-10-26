@@ -1,0 +1,23 @@
+create table employee
+(
+	e_id varchar2(12),
+	name varchar2(20) NOT NULL,
+	contact_number varchar2(17) NOT NULL,
+	hiredate date ,
+	current_address varchar2(60) NOT NULL,
+	permanent_address varchar2(60),
+	skills varchar2(200),
+	rating number(3,1),
+	bonus number(10,2),
+	salary number(10,2) NOT NULL,
+	shift varchar2(10) DEFAULT 'Morning',
+	status varchar2(10),
+	manager_id varchar2(12) ,
+	constraint e_id_pk primary key(e_id)
+);
+
+
+
+
+insert into employee values
+('E-0000000001','Richa Jalal','+880-1556783494',to_date('01/01/2020','dd/mm/yyyy'),'Jigatola, 512 Lane, House 232/6','Jigatola, 512 Lane, House 232/6','Haircuts, Hair styling, Hair Treatments',7.5,2500.00,10000.00,'morning','active',NULL);

@@ -1,0 +1,29 @@
+Create Table Customer 
+(Customer_ID varchar2(12) NOT NULL,
+Customer_Name varchar2(20)NOT NULL,
+Customer_Type varchar2(10),
+Discount Number(4,2),
+Skin_type varchar2(30),
+Hair_type varchar2(30),
+Allergy varchar2(15),
+Phone_Number varchar2(18) NOT NULL,
+Address varchar2(30),
+Visit_count Number,
+Rating Number(2,1),
+CONSTRAINT Cust_CusID_pk PRIMARY KEY (CUSTOMER_ID)
+);
+
+INSERT into Customer 
+values ('C-000000001','Anika Mayesha','Regular','20.12','Dry','Rough,damaged','Dust,Fur','+880-1713911831','308-Nakhalpara','2','4.3');
+
+INSERT into Customer 
+values ('C-000000002','Hridita Jalal','Regular','12.55','Oily','Normal','Fur','+880-1978919035','112-Jigatola','1','4.3');
+
+INSERT into Customer 
+values ('C-000000003','Faria Habib','Regular','66.89','Dry','Rough,damaged,Thin Hair','Dust','+880-1980155669','3/B-Purana Paltan','2','4.3');
+
+INSERT into Customer 
+values ('C-000000004','Samihat Islam','Regular','55.90','Oily','Rough,damaged,Splitened','None','+880-1812016799','Avenue-1,Mirpur DOHS','2','4.3');
+
+INSERT into Customer 
+values ('C-000000005','Shutonu','Irregular','09.11','Oily','Oily','Dust','+880-1795934207','110-Dhanmondi','2','4.3');

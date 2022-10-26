@@ -1,0 +1,13 @@
+create table retailer
+(
+	name varchar2(20),
+	contact_number varchar2(17),
+	address varchar2(60),
+	constraint name_pk primary key(name)
+);
+
+
+
+
+insert into retailer values
+('Beauty Shop Limited','+880-1597856490','Mirpur 11, House 11/7, Dhaka');

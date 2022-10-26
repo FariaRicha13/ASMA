@@ -1,0 +1,19 @@
+create table equipments
+(
+	eq_id varchar2(12),
+	name varchar2(20),
+	model varchar2(100),
+	amount number,
+	warranty date,
+	unit_price number(10,2),
+	constraint eq_id_pk primary key(eq_id);
+);
+
+
+
+insert into equipments values
+('Eq-000000001','Hairdrier','rb-s27(special edition)',4,to_date('11/02/2030','dd/mm/yyyy'),1560.00);
+insert into equipments values
+('Eq-000000002','Salon Chair','Black, Leather',7,to_date('01/01/2027','dd/mm/yyyy'),13000.00);
+insert into equipments values
+('Eq-000000003','Beurer Beauty Straightner','HSB40',4,to_date('23/07/2022','dd/mm/yyyy'),2700.00);

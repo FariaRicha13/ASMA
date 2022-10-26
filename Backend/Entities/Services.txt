@@ -1,0 +1,15 @@
+create table services
+(
+	s_code varchar2(12)
+	name varchar2(20) NOT NULL,
+	offer varchar2(30),
+	price number(7,2) NOT NULL,
+	constraint s_code_pk primary key(s_code)
+);
+
+
+
+
+
+insert into services values
+('SF-000000001','Gold Facial','10% off for MIST/BUP students',2500.00);

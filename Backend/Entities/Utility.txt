@@ -1,0 +1,16 @@
+create table utility
+(
+	u_id varchar2(12),
+	name varchar2(20)NOT NULL,
+	status varchar2(10),
+	paid_amount number(7,2)NOT NULL,
+	company varchar2(20)NOT NULL,
+	constraint u_id_pk primary key(u_id);
+);
+
+
+
+
+
+insert into utility values
+('U-0000000001','Electricity Bill','due',5340.59,'Rakib & Sons Electricity');

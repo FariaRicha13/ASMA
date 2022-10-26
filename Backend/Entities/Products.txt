@@ -1,0 +1,20 @@
+create table products
+(
+	barcode varchar2(12),
+	prod_name varchar2(50),
+	prod_specification varchar2(50),
+	prod_size varchar2(35),
+	unit_price number(10,2),
+	rating number(3,1),
+	batch_date date,
+	exp_date date,
+	storage_amount number,
+	withdrawn_amount number,
+	constraint barcode_pk primary key(barcode)
+);
+
+
+
+
+insert into products values
+('673193128310','Johnson'||chr(39)||'s Baby Lotion','Extra moisturizing with Aloe Vera','Large 20% Extra',1560.00,8.9,to_date('11/02/2020','dd/mm/yyyy'),to_date('19/03/2021','dd/mm/yyyy'),7,3);
