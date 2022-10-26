@@ -1,0 +1,9 @@
+create table R_P(
+barcode varchar2(12) NOT NULL,
+name varchar2(20) NOT NULL,
+constraint rp_barcode_fk foreign key(barcode) references products(barcode) on delete cascade ,
+constraint rp_name_fk foreign key(name) references retailer(name) on delete cascade 
+
+);
+
+insert into R_R values('673193128310','Beauty Shop Limited');

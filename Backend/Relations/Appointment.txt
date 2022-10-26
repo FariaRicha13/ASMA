@@ -1,0 +1,45 @@
+/**create table Appointment(
+e_id varchar2(12) NOT NULL,
+s_code varchar2(12) NOT NULL,
+Customer_ID varchar2(12) NOT NULL,
+Time date NOT NULL,
+Date date NOT NULL,
+
+constraint app_e_id_fk foreign key(e_id) references employee(e_id) on delete cascade [on update{cascade}],
+constraint app_s_code_fk foreign key(s_code) references services(s_code) on delete cascade [on update{cascade}],
+constraint app_customer_id_fk foreign key(Customer_ID) references Customer(Customer_ID) on delete cascade [on update{cascade}],
+
+
+
+);*/
+
+
+create table Appointment(
+e_id varchar2(12) NOT NULL,
+s_code varchar2(12) NOT NULL,
+Customer_ID varchar2(12) NOT NULL,
+Time date NOT NULL,
+Date date NOT NULL,
+
+constraint app_e_id_fk foreign key(e_id) references employee(e_id) on delete cascade ,
+constraint app_s_code_fk foreign key(s_code) references services(s_code) on delete cascade ,
+constraint app_customer_id_fk foreign key(Customer_ID) references Customer(Customer_ID) on delete cascade 
+
+);
+
+create table Appointment(
+e_id varchar2(12) NOT NULL,
+s_code varchar2(12) NOT NULL,
+Customer_ID varchar2(12) NOT NULL,
+
+constraint app_e_id_fk foreign key(e_id) references employee(e_id) on delete cascade,
+constraint app_s_code_fk foreign key(s_code) references services (s_code) on delete cascade,
+constraint app_customer_id_fk foreign key(Customer_ID) references Customer (Customer_ID) on delete cascade
+
+);
+
+insert into Appointment values('E-0000000001','SF-000000001','C-000000001',to_date(),TO_DATE('12:06:55', 'HH:MI:SS'),to_date('12/06/2020','DD/MM/YYYY');
+
+
+get time and date
+select to_char(t1,'hh:mi')as "TIME", to_char(d1,'dd-mon-yyyy')as "DATE" from Appointment

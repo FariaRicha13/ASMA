@@ -1,0 +1,9 @@
+create table A_Eq(
+eq_id varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint aeq_eq_id_fk foreign key(eq_id) references equipments(eq_id) on delete cascade [on update{cascade}],
+constraint aeq_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade [on update{cascade}],
+
+);
+
+insert into A_Eq values('Eq-000000001','');

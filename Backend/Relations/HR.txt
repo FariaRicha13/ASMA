@@ -1,0 +1,8 @@
+create table HR(
+e_id varchar2(12) NOT NULL,
+type varchar(50),
+complain varchar(500),
+constraint hr_e_id_fk foreign key(e_id) references employee(e_id) on delete cascade
+);
+
+insert into A_Em values('E-0000000001','Harassment','lsdlka sakldjla lskajdlsk');

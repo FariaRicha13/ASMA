@@ -1,0 +1,17 @@
+/**create table A_U(
+u_id varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint au_u_id_fk foreign key(u_id) references utility(u_id) on delete cascade [on update{cascade}],
+constraint au_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade [on update{cascade}],
+);*/
+
+
+create table A_U(
+u_id varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint au_u_id_fk foreign key(u_id) references utility(u_id) on delete cascade ,
+constraint au_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade 
+);
+
+
+insert into A_U values('U-0000000001','');

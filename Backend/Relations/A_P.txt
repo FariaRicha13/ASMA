@@ -1,0 +1,17 @@
+/**create table A_P(
+barcode varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint ap_barcode_fk foreign key(barcode) references products(barcode) on delete cascade [on update{cascade}],
+constraint ap_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade [on update{cascade}],
+);*/
+
+create table A_P(
+barcode varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint ap_barcode_fk foreign key(barcode) references products(barcode) on delete cascade ,
+constraint ap_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade 
+);
+
+
+
+insert into A_P values('673193128310','');

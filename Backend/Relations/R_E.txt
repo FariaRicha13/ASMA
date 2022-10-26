@@ -1,0 +1,28 @@
+/**create table R_E(
+eq_id varchar2(12) NOT NULL,
+name varchar2(20) NOT NULL,
+constraint re_eq_id_fk foreign key(eq_id) references equipment(eq_id) on delete cascade [on update{cascade}],
+constraint re_name_fk foreign key(name) references retailer(name) on delete cascade [on update{cascade}],
+
+);*/
+
+
+
+create table R_E(
+eq_id varchar2(12) NOT NULL,
+name varchar2(20) NOT NULL,
+constraint re_eq_id_fk foreign key(eq_id) references equipment(eq_id) on delete cascade ,
+constraint re_name_fk foreign key(name) references retailer(name) on delete cascade 
+
+);
+
+
+
+create table R_E(
+eq_id varchar2(12) NOT NULL,
+ret_name varchar2(12) NOT NULL,
+constraint re_eq_id_fk foreign key(eq_id) references equipments(eq_id) on delete cascade,
+constraint re_name_fk foreign key (ret_name) references retailer(ret_name) on delete cascade
+);
+
+insert into R_E values('Eq-000000001','Beauty Shop Limited');

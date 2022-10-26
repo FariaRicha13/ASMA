@@ -1,0 +1,18 @@
+create table A_Em(
+e_id varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint aem_e_id_fk foreign key(e_id) references employee(e_id) on delete cascade on update cascade,
+constraint aem_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade on update cascade,
+
+);
+
+
+create table A_Em(
+e_id varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint aem_e_id_fk foreign key(e_id) references employee(e_id) on delete cascade,
+constraint aem_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade
+
+);
+
+insert into A_Em values('E-0000000001','');

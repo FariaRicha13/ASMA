@@ -1,0 +1,9 @@
+create table Sales(
+s_code varchar2(12) NOT NULL,
+transaction_id varchar2(12) NOT NULL,
+constraint sales_s_code_fk foreign key(s_code) references services(s_code) on delete cascade,
+constraint sales_transaction_id_fk foreign key(transaction_id) references accounts(transaction_id) on delete cascade
+
+);
+
+insert into Sales values('SF-000000001','');
